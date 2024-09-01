@@ -1,0 +1,42 @@
+.app {
+  display: grid;
+  grid-template-columns: 35.93% 64.06%;
+  height: 100vh;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+
+aside {
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  background: url(../assets/Background.png) no-repeat center/cover;
+
+  & .inner-aside {
+    margin: 2rem;
+
+    & img {
+      display: block;
+      width: 3rem;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    & span {
+      font: var(--logo);
+      color: var(--pink);
+    }
+
+    & p {
+      margin-top: .25rem;
+      color: var(--text-heading);
+      font-weight: 300;
+    }
+  }
+}
+
+main {
+  margin: 1.25rem 1.25rem 0 0;
+  background-color: var(--shape-body);
+
+  overflow: auto;
+}
