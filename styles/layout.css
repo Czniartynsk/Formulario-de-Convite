@@ -35,8 +35,16 @@ aside {
 }
 
 main {
+  overflow: auto;
+
   margin: 1.25rem 1.25rem 0 0;
+  padding: 5rem 8.125rem;
+
   background-color: var(--shape-body);
 
-  overflow: auto;
+  & h1 {
+    font: var(--heading-md);
+    color: var(--text-heading);
+    margin-bottom: 2.5rem;
+  }
 }

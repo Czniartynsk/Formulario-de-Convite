@@ -24,10 +24,56 @@
 
         <form action="" method="post" enctype="multipart/form-data">
           <fieldset>
-            <img src="./assets/icons/calendar.svg" alt="Ícone de calendário.">
+            <div class="img-legend"></div>
             <legend>Sobre o envento</legend>
 
+            <div class="input-wrapper">
+              <label for="event-name">Título</label>
+              <input type="text" id="event-name" name="event-name" placeholder="Nome do evento">
+            </div>
 
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="begin">Início</label>
+                <input type="date" id="begin" name="begin" lang="pt-br">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="end">Fim</label>
+                <input type="date" id="end" name="end" lang="pt-br">
+              </div>
+            </div>
+
+            <div class="flex">
+              <div class="input-wrapper">
+                <label for="event-kind">Tipo</label>
+                <div class="radio-wrapper">
+
+                  <div class="radio-inner">
+                    <div class="radio-img"></div>
+                    <label for="event-kind">Presencial</label>
+                    <input type="radio" id="event-kind" name="event-kind">
+                  </div>
+
+                  <div class="radio-inner">
+                    <div class="radio-img"></div>
+                    <label for="event-kind">Online</label>
+                    <input type="radio" id="event-kind" name="event-kind">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="location">Local</label>
+                <input type="text" id="location" name="location" placeholder="Link ou endereço">
+              </div>
+            </div>
+
+            <div class="textarea-wrapper">
+              <label for="description">Descrição</label>
+              <textarea id="description" name="description" cols="60"  rows="8" placeholder="Escreva sobre os detalhes do evento"></textarea>
+            </div>
           </fieldset>
         </form>
       </div>
