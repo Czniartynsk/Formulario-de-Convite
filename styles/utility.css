@@ -1,3 +1,18 @@
 .bd-rad-12 {
   border-radius: .75rem;
 }
+
+.heading-sm {
+  font: var(--heading-sm);
+  color: var(--text-heading);
+}
+
+.grid-50 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1rem;
+}
+
+.gap-16 {
+  gap: 1rem;
+}

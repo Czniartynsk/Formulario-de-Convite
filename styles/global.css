@@ -46,8 +46,8 @@
   --heading-sm: 600 1.125rem "Baloo 2", sans-serif;
 
   --body-md: 400 1rem "Open Sans", sans-serif;
-  --body-sm: 400 0.875 "Open Sans", sans-serif;
-  --body-xs: 400 0.75 "Open Sans", sans-serif;
+  --body-sm: 400 0.875rem "Open Sans", sans-serif;
+  --body-xs: 400 0.75rem "Open Sans", sans-serif;
 }
 
 body {

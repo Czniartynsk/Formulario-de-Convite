@@ -35,12 +35,14 @@ aside {
 }
 
 main {
-  overflow: auto;
-
-  margin: 1.25rem 1.25rem 0 0;
-  padding: 5rem 8.125rem;
-
   background-color: var(--shape-body);
+  
+  .container {
+    overflow-y: auto;
+    /* margin: 1.25rem 1.25rem 0 1.25rem; */
+    margin: 5rem 8.125rem;
+    
+  }
 
   & h1 {
     font: var(--heading-md);
