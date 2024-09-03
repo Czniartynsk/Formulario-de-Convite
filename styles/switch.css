@@ -1,0 +1,54 @@
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.switch {
+  width: 4rem;
+  /* background-color: var(--input-base); */
+  position: relative;
+  cursor: pointer;
+  margin-block: .5rem;
+}
+
+.switch span {
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  background: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 9999px;
+  /* backdrop-filter: blur(4px); */
+  /* -webkit-backdrop-filter: blur(4px); */
+}
+
+.switch button {
+  background-color: var(--input-stroke);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: absolute;
+  /* Outra maneira de fazer a movimentação do switch
+    right: var(--switch-position);
+  */
+  z-index: 1;
+
+  /* Outra forma de realizar o alinhamento do botão com o span */
+  transform: translateY(-50%);
+  top: 50%;
+  margin-inline: .25rem;
+  /* utilizando animação  
+  left: 0; 
+  */
+ 
+  /* Nesse caso, não precisa colocar o forward, porque ele já cai no valor inicial do slide-in */
+  animation: slide-in 0.2s forwards;
+}
+
+.dark .switch button {
+  animation: slide-out 0.2s;
+}

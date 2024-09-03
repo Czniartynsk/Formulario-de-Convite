@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
               <input type="text" id="event-name" name="event-name" placeholder="Nome do evento">
             </div>
 
-            <div class="grid-50">
+            <div class="grid grid-50 gap-16">
               <div class="input-wrapper">
                 <label for="begin">Início</label>
                 <input type="datetime-local" id="begin" name="begin" lang="pt-br">
@@ -46,7 +46,7 @@
               </div>
             </div>
 
-            <div class="grid-50">
+            <div class="grid grid-50 gap-16">
               <div class="input-wrapper">
                 <label for="event-kind">Tipo</label>
 
@@ -224,11 +224,37 @@
                 </div>
 
             </div>
+
+            <div class="grid grid-terco gap-16">
+              <div class="input-wrapper">
+                <label>Estilo</label>
+                <div class="switch-wrapper">
+                  <div class="switch" onclick="toggleMode()">
+                    <button type="button"></button>
+                    <span></span>
+                  </div>
+                  <p>Escuro</p>
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="cover-image">Foto de capa</label>
+                <div class="field-file">
+                  <input type="file" id="cover-image" name="cover-image">
+                  <div class="btn-file grid grid-terco">
+                    <div class="img-btn-file"></div> 
+                    <span>Selecionar</span>
+                  </div>
+                  <p>Nenhum arquivo selecionado</p>
+                </div>
+
+              </div>
+            </div>
           </fieldset>
         </form>
       </div>
     </main>
   </div>
-
+  <script src="script.js"></script>
 </body>
 </html>

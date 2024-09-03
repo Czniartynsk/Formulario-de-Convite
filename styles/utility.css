@@ -7,10 +7,16 @@
   color: var(--text-heading);
 }
 
-.grid-50 {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  gap: 1rem;
+}
+
+.grid-50 {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.grid-terco {
+  grid-template-columns: 31.42% 1fr;
 }
 
 .gap-16 {
