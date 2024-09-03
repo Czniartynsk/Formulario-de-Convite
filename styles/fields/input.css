@@ -1,0 +1,34 @@
+.input-wrapper > label, .textarea-wrapper > label {
+  display: block;
+  margin-bottom: .75rem;
+}
+
+input, textarea, input[type="date"] {
+  width: 100%;
+  background-color: var(--input-base);
+  padding: 0.8125rem 1rem;
+  border: 1px solid var(--input-stroke);
+  border-radius: .5rem;
+  color: var(--input-placeholder);
+  font: var(--body-md);
+  
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
+}
+
+input[type="datetime-local"] {
+  position: relative;
+  /* color: var(--text-secondary); */
+
+  /* seletor do icone de calendário no input de date */
+  &::-webkit-calendar-picker-indicator {
+    /* Não retira com o none, apenas deixa invisível pra não perder a funcionalidade */
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    inset:0;
+    width: 100%;
+    height: 100%;
+  }
+}

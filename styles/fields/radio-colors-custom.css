@@ -1,0 +1,43 @@
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 2.48rem);
+  gap: .75rem;
+  justify-content: center;
+}
+
+.radio-color {
+  background-color: var(--shape-button);
+  width: 2.375rem;
+  height: 2.375rem;
+  border: 2px solid var(--shape-button);
+  border-radius: 50%;
+  position: relative;
+  
+  & input {
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .ball::after {
+    content: "";
+    width: 1.75rem;
+    aspect-ratio: 1/1;
+    position: absolute;
+    border-radius: 50%;
+    inset: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: var(--color-ball);
+  }
+  
+  &:hover {
+    background-color: var(--shape-hover);
+    border-color: var(--shape-hover);
+  }
+
+  &:has(:checked):focus-within {
+    border-color: var(--brand-light);
+  }
+}

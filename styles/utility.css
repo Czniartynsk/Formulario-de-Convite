@@ -16,3 +16,37 @@
 .gap-16 {
   gap: 1rem;
 }
+
+.brand-light {
+  --color-ball: var(--brand-light);
+}
+.navy {
+  --color-ball: var(--navy);
+}
+.purple {
+  --color-ball: var(--purple);
+}
+.fuschia {
+  --color-ball: var(--fuschia);
+}
+.pink {
+  --color-ball: var(--pink);
+}
+.danger {
+  --color-ball: var(--danger);
+}
+.orange {
+  --color-ball: var(--orange);
+}
+.yellow {
+  --color-ball: var(--yellow);
+}
+.lime {
+  --color-ball: var(--lime);
+}
+.green {
+  --color-ball: var(--green);
+}
+.cyan {
+  --color-ball: var(--cyan);
+}

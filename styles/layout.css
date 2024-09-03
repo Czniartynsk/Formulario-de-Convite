@@ -38,11 +38,13 @@ main {
   background-color: var(--shape-body);
   margin-top: 1.25rem;
   margin-left: 1.25rem;
+  overflow: auto;
   
   .container {
-    overflow: auto;
-    /* margin: 1.25rem 1.25rem 0 1.25rem; */
-    margin: 5rem 8.125rem;
+    /* margin: 5rem 8.125rem; */
+    margin-left: 8.125rem;
+    margin-block: 5rem;
+    width: 560px;
   }
 
   & h1 {

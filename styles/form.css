@@ -1,22 +1,3 @@
-form fieldset:nth-child(1) {
-  legend {
-    position: relative;
-    margin-bottom: 1.5rem;
-    margin-left: 32px;
-  }
-
-  & .img-legend::before {
-    content: "";
-    position: absolute;
-    background: url(../assets/icons/calendar\(1\).svg) no-repeat center/contain;
-    width: 24px;
-    aspect-ratio: 1/1;
-    right: 100%;
-    margin-right: 10px;
-
-  }
-}
-
 fieldset {
   border: none;
   line-height: 1.25rem;
@@ -27,91 +8,39 @@ fieldset {
   
   & legend {
     text-align: left;
+    margin-bottom: 1.5rem;
+    margin-left: 32px;
+
+    position: relative;
     
     & h2 {
       color: var(--text-heading);
     }
   }
-}
 
-.radio-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8.125rem, 1fr));
-  background-color: var(--input-base);
-  border: 1px solid var(--input-stroke);
-  border-radius: .5rem;
-  padding-inline: .25rem;
-}
-
-.radio-inner {
-  position: relative;
-  text-align: center;
-  margin-block: .25rem;
-  border-radius: .3125rem;
-  padding-block: 0.56rem;
-  padding-inline: 1.125rem;
-
-  & input[type="radio"] {
+  & .img-legend::before {
+    content: "";
     position: absolute;
-    inset: 0;
-    opacity: 0;
-  }
-  
-  & > label {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
+    width: 24px;
+    aspect-ratio: 1/1;
+    right: 100%;
+    margin-right: 10px;
   }
 
-  & svg path {
-    fill: var(--text-body);
+  &:nth-child(1) .img-legend::before {
+    background: url(../assets/icons/calendar.svg) no-repeat center/contain;
   }
 
-  &:focus-within, &:has(:checked), &:hover {
-    background-color: var(--shape-button);
-
-    & label {
-      font-weight: 600;
-      color: var(--text-heading);
-    }
-    
-    & svg path {
-      fill: var(--brand-light);
-    }
+  &:nth-child(2) .img-legend::before {
+    background: url(../assets/icons/paintbrush-vertical.svg) no-repeat center/contain;
   }
 }
 
-input, textarea, input[type="date"] {
-  width: 100%;
-  background-color: var(--input-base);
-  padding: 0.8125rem 1rem;
-  border: 1px solid var(--input-stroke);
-  border-radius: .5rem;
-  color: var(--input-placeholder);
-  font: var(--body-md);
-  
-  &::placeholder {
-    color: var(--input-placeholder);
-  }
+fieldset + fieldset {
+  margin-top: 3rem;
 }
 
-input[type="datetime-local"] {
-  position: relative;
-  /* color: var(--text-secondary); */
-
-  /* seletor do icone de calendário no input de date */
-  &::-webkit-calendar-picker-indicator {
-    /* Não retira com o none, apenas deixa invisível pra não perder a funcionalidade */
-    opacity: 0;
-    cursor: pointer;
-    position: absolute;
-    inset:0;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.input-wrapper > label, .textarea-wrapper > label {
-  display: block;
-  margin-bottom: .75rem;
+.custom {
+  display: flex;
+  gap: 1.75rem;
 }
