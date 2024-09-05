@@ -1,0 +1,14 @@
+.error-msg {
+  display: flex;
+  gap: .5rem;
+  margin-top: .5rem;
+
+  & img {
+    width: 1rem;
+    aspect-ratio: 1/1;
+  }
+
+  & span {
+    color: var(--danger);
+  }
+}

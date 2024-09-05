@@ -34,6 +34,10 @@ fieldset {
   &:nth-child(2) .img-legend::before {
     background: url(../assets/icons/paintbrush-vertical.svg) no-repeat center/contain;
   }
+
+  &:nth-child(3) .img-legend::before {
+    background: url(../assets/icons/contact.svg) no-repeat center/contain;
+  }
 }
 
 fieldset + fieldset {

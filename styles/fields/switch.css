@@ -16,7 +16,7 @@
   display: block;
   width: 4rem;
   height: 2rem;
-  background: var(--input-base);
+  background: var(--brand-light);
   border: 1px solid var(--input-stroke);
   border-radius: 9999px;
   /* backdrop-filter: blur(4px); */
@@ -24,7 +24,7 @@
 }
 
 .switch button {
-  background-color: var(--input-stroke);
+  background-color: var(--text-heading);
   width: 1.5rem;
   height: 1.5rem;
   border: none;
@@ -49,6 +49,13 @@
   animation: slide-in 0.2s forwards;
 }
 
-.dark .switch button {
-  animation: slide-out 0.2s;
+.dark .switch { 
+  & span {
+    background-color: var(--input-base);
+  }
+
+  & button {
+    animation: slide-out 0.2s;
+    background-color: var(--input-stroke);
+  }
 }
