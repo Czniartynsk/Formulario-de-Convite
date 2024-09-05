@@ -31,18 +31,30 @@
          
             <div class="input-wrapper">
               <label for="event-name">Título</label>
-              <input type="text" id="event-name" name="event-name" placeholder="Nome do evento">
+              <input required type="text" id="event-name" name="event-name" placeholder="Nome do evento">
+              <div class="error-msg">
+                <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                <span>Error message</span>
+              </div>
             </div>
 
             <div class="grid grid-50 gap-16">
               <div class="input-wrapper">
                 <label for="begin">Início</label>
-                <input type="datetime-local" id="begin" name="begin" lang="pt-br">
+                <input required type="datetime-local" id="begin" name="begin" lang="pt-br">
+                <div class="error-msg">
+                  <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                  <span>Error message</span>
+                </div>
               </div>
 
               <div class="input-wrapper">
                 <label for="end">Fim</label>
-                <input type="datetime-local" id="end" name="end" lang="pt-br">
+                <input required type="datetime-local" id="end" name="end" lang="pt-br">
+                <div class="error-msg">
+                  <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                  <span>Error message</span>
+                </div>
               </div>
             </div>
 
@@ -78,13 +90,21 @@
 
               <div class="input-wrapper">
                 <label for="location">Local</label>
-                <input type="text" id="location" name="location" placeholder="Link ou endereço">
+                <input required type="text" id="location" name="location" placeholder="Link ou endereço">
+                <div class="error-msg">
+                  <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                  <span>Error message</span>
+                </div>
               </div>
             </div>
 
             <div class="textarea-wrapper">
               <label for="description">Descrição</label>
-              <textarea id="description" name="description" cols="8"  rows="8" placeholder="Escreva sobre os detalhes do evento"></textarea>
+              <textarea required id="description" name="description" cols="8"  rows="8" placeholder="Escreva sobre os detalhes do evento"></textarea>
+              <div class="error-msg">
+                <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                <span>Error message</span>
+              </div>
             </div>
           </fieldset>
 
@@ -247,10 +267,81 @@
                   </div>
                   <p>Nenhum arquivo selecionado</p>
                 </div>
-
               </div>
             </div>
           </fieldset>
+
+          <fieldset class="contact">
+            <legend>
+              <span class="img-legend"></span>
+              <h2 class="heading-sm">
+                Dados para contato
+              </h2>
+            </legend>
+            <div class="input-wrapper">
+              <label for="name">Nome</label>
+              <input required id="name" name="name" type="text" placeholder="Nome completo">
+              <div class="error-msg">
+                <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                <span>Error message</span>
+              </div>
+            </div>
+
+            <div class="grid grid-50 gap-16">
+              <div class="input-wrapper">
+                <label for="mail">E-mail</label>
+                <input required type="email" id="mail" name="mail" placeholder="exemplo@mail.com" pattern=".+@.+\.com">
+                <div class="error-msg">
+                  <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                  <span>Error message</span>
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="phone">Telefone</label>
+                <input required type="tel" id="phone" name="phone" placeholder="(99) 9 9999-9999">
+                <div class="error-msg">
+                  <img src="./assets/icons/circle-alert.svg" alt="Círculo com exclamação.">
+                  <span>Error message</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="check-wrapper">
+              <div class="checkbox">
+                <div class="img-check">
+                  <svg width="32" height="32" viewBox="0 0 32 32"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.3738 7.29289C27.7643 7.68342 27.7643 8.31658 27.3738 8.70711L12.7071 23.3738C12.3166 23.7643 11.6835 23.7643 11.2929 23.3738L4.62627 16.7071C4.23574 16.3166 4.23574 15.6834 4.62627 15.2929C5.01679 14.9024 5.64996 14.9024 6.04048 15.2929L12 21.2525L25.9596 7.29289C26.3501 6.90237 26.9833 6.90237 27.3738 7.29289Z" fill="white"/>
+                  </svg>
+                  <input required type="checkbox" name="terms" id="terms">
+                </div>
+                <label for="terms">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></label>
+              </div>
+              <div class="checkbox">
+                <div class="img-check">
+                  <svg width="32" height="32" viewBox="0 0 32 32"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.3738 7.29289C27.7643 7.68342 27.7643 8.31658 27.3738 8.70711L12.7071 23.3738C12.3166 23.7643 11.6835 23.7643 11.2929 23.3738L4.62627 16.7071C4.23574 16.3166 4.23574 15.6834 4.62627 15.2929C5.01679 14.9024 5.64996 14.9024 6.04048 15.2929L12 21.2525L25.9596 7.29289C26.3501 6.90237 26.9833 6.90237 27.3738 7.29289Z" fill="white"/>
+                  </svg>
+                  <input type="checkbox" name="notify-sms" id="notify-sms">
+                </div>
+                <label for="notify-sms">Aceito receber atualizações e promoções por e-mail</label>
+              </div>
+              <div class="checkbox">
+                <div class="img-check">
+                  <svg width="32" height="32" viewBox="0 0 32 32"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.3738 7.29289C27.7643 7.68342 27.7643 8.31658 27.3738 8.70711L12.7071 23.3738C12.3166 23.7643 11.6835 23.7643 11.2929 23.3738L4.62627 16.7071C4.23574 16.3166 4.23574 15.6834 4.62627 15.2929C5.01679 14.9024 5.64996 14.9024 6.04048 15.2929L12 21.2525L25.9596 7.29289C26.3501 6.90237 26.9833 6.90237 27.3738 7.29289Z" fill="white"/>
+                  </svg>
+                  <input type="checkbox" name="notify-email" id="notify-email">
+                </div>
+                <label for="notify-email">Aceito receber atualizações e promoções por SMS</label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="generate-wrapper">
+            <div class="img-generate"></div>
+            <span>Gerar convite</span>
+            <!-- <button id="generate"></button> -->
+          </div>
         </form>
       </div>
     </main>
